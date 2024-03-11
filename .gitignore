@@ -1,0 +1,4 @@
+writable
+vendor
+composer.lock
+.env
