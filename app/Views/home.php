@@ -1,39 +1,45 @@
-<?= $this->extend('layouts/main_layout')?>
+<?= $this->extend('layouts/main_layout') ?>
 
-<?= $this->section('content')?>
-    
-    <div class="container mt-5">
+<?= $this->section('content') ?>
 
-        <div class="row">
-            <div class="col">
+<div class="container mt-5">
 
-            <?php form_open_multipart('/submit') ?>
+    <div class="row">
+        <div class="col">
 
-                <div class="mb-3">
+            <?= form_open_multipart('/submit') ?>
 
-                    <label for="email" class="form-label">Email *</label>
-                    <input type="text" class="form-control" name="email" id="email" required>
+                <div class="row mb-3">
+
+                    <div class="col">
+
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="text" class="form-control" name="email" id="email" required>
+                    </div>
+
+                    <div class="col">
+
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" name="name" id="name">
+                    </div>
+
                 </div>
 
-                <div class="mb-3">
+                <div class="row mb-3">
 
-                    <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" name="name" id="name">
-                </div>
-
-
-                <div class="mb-3">
-                    <label for="area" class="form-label">Area de Reclamação*</label>
-                    <select name="area" id="area" class="form-select" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+                    <div class="col-6">
+                        <label for="area" class="form-label">Area de Reclamação*</label>
+                        <select name="area" id="area" class="form-select" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="complaint" class="form-label">Area texto para reclamação *</label>
-                    <textarea name="complaint" id="complaint" class="form-control"></textarea>
+                    <textarea name="complaint" id="complaint" class="form-control" rows="6"></textarea>
                 </div>
 
                 <div class="mb-3">
@@ -45,10 +51,10 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary">Enviar</button>
+                <input type="submit" class="btn btn-primary" value="Enviar">
 
-            <?php form_close()?>
-            </div>
+            <?= form_close() ?>
         </div>
     </div>
-<?= $this->endSection('content')?>
+</div>
+<?= $this->endSection('content') ?>
