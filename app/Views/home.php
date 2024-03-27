@@ -54,6 +54,19 @@
                 <input type="submit" class="btn btn-primary" value="Enviar">
 
             <?= form_close() ?>
+
+            <?php if(!empty($validation_errors)):?>
+
+                <div class="alert alert-danger mt-3">
+                    <ul>
+                        <?php foreach ($validation_errors as $error): ?>
+
+                            <li><?php echo $error?></li>
+
+                        <?php endforeach ?>
+                    </ul>
+                </div>
+            <?php endif ?>
         </div>
     </div>
 </div>
