@@ -15,6 +15,7 @@
 
                         <label for="email" class="form-label">Email *</label>
                         <input type="text" class="form-control" name="email" id="email" required>
+                        <?php echo show_validation_error('email', $validation_errors)?>
                     </div>
 
                     <div class="col">
@@ -34,12 +35,14 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
+                        <?php echo show_validation_error('area', $validation_errors)?>
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="complaint" class="form-label">Area texto para reclamação *</label>
                     <textarea name="complaint" id="complaint" class="form-control" rows="6"></textarea>
+                    <?php echo show_validation_error('complaint', $validation_errors)?>
                 </div>
 
                 <div class="mb-3">
@@ -54,19 +57,6 @@
                 <input type="submit" class="btn btn-primary" value="Enviar">
 
             <?= form_close() ?>
-
-            <?php if(!empty($validation_errors)):?>
-
-                <div class="alert alert-danger mt-3">
-                    <ul>
-                        <?php foreach ($validation_errors as $error): ?>
-
-                            <li><?php echo $error?></li>
-
-                        <?php endforeach ?>
-                    </ul>
-                </div>
-            <?php endif ?>
         </div>
     </div>
 </div>
