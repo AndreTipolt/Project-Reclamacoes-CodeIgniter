@@ -14,14 +14,14 @@
                     <div class="col">
 
                         <label for="email" class="form-label">Email *</label>
-                        <input type="text" class="form-control" name="email" id="email" required>
+                        <input type="text" class="form-control" name="email" id="email" required value="<?php echo old('email') ?>">
                         <?php echo show_validation_error('email', $validation_errors)?>
                     </div>
 
                     <div class="col">
 
                         <label for="name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" name="name" id="name">
+                        <input type="text" class="form-control" name="name" id="name" value="<?php echo old('name') ?>">
                     </div>
 
                 </div>
@@ -41,7 +41,7 @@
 
                 <div class="mb-3">
                     <label for="complaint" class="form-label">Area texto para reclamação *</label>
-                    <textarea name="complaint" id="complaint" class="form-control" rows="6"></textarea>
+                    <textarea name="complaint" id="complaint" class="form-control" rows="6" value="<?php echo old('complaint') ?>"></textarea>
                     <?php echo show_validation_error('complaint', $validation_errors)?>
                 </div>
 
@@ -49,8 +49,6 @@
                     <label for="files" class="form-label">Upload de ficheiros</label>
                     <div class="d-flex flex-row justify-content-between gap-3">
                         <input type="file" class="form-control" id="files1" name="files[]">
-                        <input type="file" class="form-control" id="files2" name="files[]">
-                        <input type="file" class="form-control" id="files3" name="files[]">
                     </div>
                 </div>
 

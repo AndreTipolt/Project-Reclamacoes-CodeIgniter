@@ -52,9 +52,25 @@ class Main extends BaseController
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
-        dd([
-            $this->request->getPost(),
-            $this->request->getFiles()
-        ]);
+        $file = $this->request->getFile('file1');
+
+        $newName = '';
+
+        if($file->isValid() && !$file->hasMoved()){
+
+            $newName = $file->getRandomName();
+
+            $file->move(WRITEPATH . 'uploads', $newName);
+
+        }
+
+
+        $data = [
+            'email' => $this->request->getPost('email'),
+            'name' => $this->request->getPost('name'),
+            'area' => $this->request->getPost('area'),
+            'complaint' => $this->request->getPost('complaint'),
+            'file' => $newName,
+        ];
     }
 }
