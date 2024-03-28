@@ -45,13 +45,6 @@
                     <?php echo show_validation_error('complaint', $validation_errors)?>
                 </div>
 
-                <div class="mb-3">
-                    <label for="files" class="form-label">Upload de ficheiros</label>
-                    <div class="d-flex flex-row justify-content-between gap-3">
-                        <input type="file" class="form-control" id="files1" name="files[]">
-                    </div>
-                </div>
-
                 <input type="submit" class="btn btn-primary" value="Enviar">
 
             <?= form_close() ?>
