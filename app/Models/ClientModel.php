@@ -11,13 +11,13 @@ class ClientModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
-    protected $protectFields    = true;
+    protected $protectFields    = false;
     protected $allowedFields    = [];
 
     protected bool $allowEmptyInserts = false;
 
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

@@ -58,8 +58,8 @@ class Main extends BaseController
         $data = [
             'email' => $this->request->getPost('email'),
             'name' => $this->request->getPost('name'),
-            'area' => $this->request->getPost('area'),
-            'complaint' => $this->request->getPost('complaint'),
+            // 'area' => $this->request->getPost('area'),
+            // 'complaint' => $this->request->getPost('complaint'),
         ];
 
         $client_model = new ClientModel();

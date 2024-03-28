@@ -51,10 +51,10 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'         => '',
-        'hostname'    => '127.0.0.1',
-        'username'    => '',
-        'password'    => '',
-        'database'    => ':memory:',
+        'hostname'    => '200.150.205.45',
+        'username'    => 'root',
+        'password'    => 'Xi37iQO0X3',
+        'database'    => 'db_reclamacoes',
         'DBDriver'    => 'SQLite3',
         'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
         'pConnect'    => false,
