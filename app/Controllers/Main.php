@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ClientModel;
+use App\Models\ComplaintModel;
 
 class Main extends BaseController
 {
@@ -64,7 +66,6 @@ class Main extends BaseController
 
         }
 
-
         $data = [
             'email' => $this->request->getPost('email'),
             'name' => $this->request->getPost('name'),
@@ -72,5 +73,19 @@ class Main extends BaseController
             'complaint' => $this->request->getPost('complaint'),
             'file' => $newName,
         ];
+
+        $client_model = new ClientModel();
+
+        $complaint_model = new ComplaintModel();
+
+        $client = $client_model->where('email', $data['email'])->first();
+        
+
+        if(!$client){
+            $client_model->insert($data);
+            $client_id = $client_model->getInsertID();
+        } else{
+            $client_id = $client['id'];
+        }
     }
 }
