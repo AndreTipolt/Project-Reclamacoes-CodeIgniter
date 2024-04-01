@@ -9,6 +9,3 @@ function show_validation_error($field, $errors){
         return '<div class="text-danger">'. $errors[$field] .'</div>';
     }
 }
-
-
-?>
