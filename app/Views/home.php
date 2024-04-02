@@ -13,7 +13,7 @@
 
                     <div class="col">
 
-                        <label for="email" class="form-label">Emailhahaha *</label>
+                        <label for="email" class="form-label">Email email email email *</label>
                         <input type="text" class="form-control" name="email" id="email" required value="<?php echo old('email') ?>">
                         <? //php echo show_validation_error('email', $validation_errors)?>
                     </div>
