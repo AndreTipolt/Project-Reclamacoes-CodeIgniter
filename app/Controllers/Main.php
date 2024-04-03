@@ -10,13 +10,14 @@ class Main extends BaseController
 {
 
     public function index(){
-        echo "sim";
+        
+        return view('home');
     }
     public function complaint_frm()
     {
         $data['validation_errors'] = session()->getFlashdata('errors');
 
-        return view('home', $data);
+        return view('complaint_frm', $data);
     }
 
     public function submit(){
