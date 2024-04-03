@@ -10,7 +10,13 @@ class Main extends BaseController
 {
 
     public function index(){
-        
+
+        $encriptar = \Config\Services::encrypter();
+
+        $id = 100;
+
+        $purl = site_url('/') . bin2hex($encriptar->encrypt($id));
+
         return view('home');
     }
     public function complaint_frm()
