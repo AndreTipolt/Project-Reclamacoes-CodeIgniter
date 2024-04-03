@@ -8,7 +8,11 @@ use App\Models\ComplaintModel;
 
 class Main extends BaseController
 {
-    public function index()
+
+    public function index(){
+        echo "sim";
+    }
+    public function complaint_frm()
     {
         $data['validation_errors'] = session()->getFlashdata('errors');
 

@@ -31,9 +31,9 @@
                     <div class="col-6">
                         <label for="area" class="form-label">Area de Reclamação*</label>
                         <select name="area" id="area" class="form-select" required>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            <option value="Area 1">Area 1</option>
+                            <option value="Area 2">Area 2</option>
+                            <option value="Area 3">Area 3</option>
                         </select>
                         <?php //echo show_validation_error('area', $validation_errors)?>
                     </div>
