@@ -83,6 +83,8 @@ class Main extends BaseController
         if(!$client){
             $client_model->insert($data);
             $client_id = $client_model->getInsertID();
+
+            return view('sucess/message_sucess.php');
         } else{
             $client_id = $client['id'];
         }
