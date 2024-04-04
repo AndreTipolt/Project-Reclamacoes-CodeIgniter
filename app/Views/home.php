@@ -15,6 +15,7 @@
         <div>
             <div class="row">
                 <div class="col text-center mt-5">
+                    <?php echo site_url('/complaint')?>
                     <a href="<?php echo site_url('complaint')?>" class="btn btn-secondary">Apresentar Reclamações</a>
                 </div>
             </div>
