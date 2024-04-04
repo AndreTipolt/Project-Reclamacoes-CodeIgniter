@@ -15,7 +15,7 @@
         <div>
             <div class="row">
                 <div class="col text-center mt-5">
-                    <a href="/complaint">Apresentar Reclamações</a>
+                    <a href="/complaint" class="btn btn-secondary">Apresentar Reclamações</a>
                 </div>
             </div>
         </div>
